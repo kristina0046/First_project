@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail lekcie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Domov</a>
+    <a href="/about">O nás</a>
+    <a href="/register">Registrácia</a>
+    <a href="/login">Prihlásenie</a>
+    <a href="/lessons">Lekcie</a>
+    <a href="/create-lesson">Vytvoriť lekciu</a>
+</nav>
+
+<h1>{{ lesson.title }}</h1>
+
+<p>Predmet: {{ lesson.subject }}</p>
+<p>Úroveň: {{ lesson.level }}</p>
+<p>Dátum: {{ lesson.lesson_date }}</p>
+<p>Popis: {{ lesson.description }}</p>
+
+<form method="POST" action="/register-lesson/{{ lesson.id }}">
+    <button type="submit">Prihlásiť sa na lekciu</button>
+</form>
+
+</body>
+</html>

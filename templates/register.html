@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrácia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Domov</a>
+    <a href="/about">O nás</a>
+    <a href="/register">Registrácia</a>
+    <a href="/login">Prihlásenie</a>
+    <a href="/lessons">Lekcie</a>
+    <a href="/create-lesson">Vytvoriť lekciu</a>
+</nav>
+
+<h1>Registrácia</h1>
+
+<form method="POST">
+    <label>Meno:</label><br>
+    <input type="text" name="name" required><br><br>
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+    <label>Heslo:</label><br>
+    <input type="password" name="password" required><br><br>
+    <label>Rola:</label><br>
+    <select name="role">
+        <option value="student">Študent</option>
+        <option value="teacher">Učiteľ</option>
+    </select><br><br>
+
+    <button type="submit">Registrovať</button>
+
+</form>
+
+</body>
+</html>

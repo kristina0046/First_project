@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Správa študentov</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Domov</a>
+    <a href="/about">O nás</a>
+    <a href="/register">Registrácia</a>
+    <a href="/login">Prihlásenie</a>
+    <a href="/create-lesson">Vytvoriť lekciu</a>
+    <a href="/lessons">Lekcie</a>
+</nav>
+
+<h1>Správa študentov</h1>
+
+<h2>{{ lesson.title }}</h2>
+
+{% for student in students %}
+    <p>{{ student.name }} - {{ student.email }}</p>
+{% else %}
+    <p>Na túto lekciu ešte nie je nikto prihlásený.</p>
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vytvoriť lekciu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Domov</a>
+    <a href="/about">O nás</a>
+    <a href="/register">Registrácia</a>
+    <a href="/login">Prihlásenie</a>
+    <a href="/create-lesson">Vytvoriť lekciu</a>
+</nav>
+
+<h1>Vytvoriť lekciu</h1>
+
+<form method="POST">
+    <label>Názov lekcie:</label><br>
+    <input type="text" name="title" required><br><br>
+    <label>Predmet:</label><br>
+    <input type="text" name="subject" required><br><br>
+    <label>Úroveň:</label><br>
+    <input type="text" name="level" required><br><br>
+    <label>Dátum a čas:</label><br>
+    <input type="datetime-local" name="lesson_date" required><br><br>
+    <label>Popis:</label><br>
+    <textarea name="description"></textarea><br><br>
+    <button type="submit">Uložiť lekciu</button>
+</form>
+
+</body>
+</html>
