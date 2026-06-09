@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 app.secret_key = "tajny_kluc"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://neondb_owner:npg_NDSzGQOrT78J@ep-still-king-alwik2bx-pooler.c-3.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
